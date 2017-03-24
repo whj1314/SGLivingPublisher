@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		81DE2AB91E821D9B00604D55 /* CoreImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 81DE2AB81E821D9B00604D55 /* CoreImage.framework */; };
+		81DE2ABB1E82614200604D55 /* cap.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 81DE2ABA1E82614200604D55 /* cap.jpg */; };
 		CB7E75F21E45758400229B9D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7E75F11E45758400229B9D /* main.m */; };
 		CB7E75F51E45758400229B9D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7E75F41E45758400229B9D /* AppDelegate.m */; };
 		CB7E75F81E45758400229B9D /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CB7E75F71E45758400229B9D /* ViewController.m */; };
@@ -31,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		81DE2AB81E821D9B00604D55 /* CoreImage.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreImage.framework; path = System/Library/Frameworks/CoreImage.framework; sourceTree = SDKROOT; };
+		81DE2ABA1E82614200604D55 /* cap.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = cap.jpg; sourceTree = "<group>"; };
+		81FFF8D51E84ED3F00E54A68 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
 		CB7E75ED1E45758400229B9D /* SGLivingPublisher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SGLivingPublisher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB7E75F11E45758400229B9D /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CB7E75F31E45758400229B9D /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -79,17 +84,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DE2AB91E821D9B00604D55 /* CoreImage.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		81DE2AB71E821D9B00604D55 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				81FFF8D51E84ED3F00E54A68 /* OpenGLES.framework */,
+				81DE2AB81E821D9B00604D55 /* CoreImage.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		CB7E75E41E45758400229B9D = {
 			isa = PBXGroup;
 			children = (
 				CB7E75EF1E45758400229B9D /* SGLivingPublisher */,
 				CB7E75EE1E45758400229B9D /* Products */,
+				81DE2AB71E821D9B00604D55 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -109,6 +125,7 @@
 				CB7E75F41E45758400229B9D /* AppDelegate.m */,
 				CB7E75F61E45758400229B9D /* ViewController.h */,
 				CB7E75F71E45758400229B9D /* ViewController.m */,
+				81DE2ABA1E82614200604D55 /* cap.jpg */,
 				CB7E75F91E45758400229B9D /* Main.storyboard */,
 				CB7E75FC1E45758400229B9D /* Assets.xcassets */,
 				CB7E75FE1E45758400229B9D /* LaunchScreen.storyboard */,
@@ -243,8 +260,8 @@
 				TargetAttributes = {
 					CB7E75EC1E45758400229B9D = {
 						CreatedOnToolsVersion = 8.2;
-						DevelopmentTeam = UPT3LKBD78;
-						ProvisioningStyle = Manual;
+						DevelopmentTeam = 77LL4T7529;
+						ProvisioningStyle = Automatic;
 					};
 				};
 			};
@@ -273,6 +290,7 @@
 			files = (
 				CB7E76001E45758400229B9D /* LaunchScreen.storyboard in Resources */,
 				CB7E75FD1E45758400229B9D /* Assets.xcassets in Resources */,
+				81DE2ABB1E82614200604D55 /* cap.jpg in Resources */,
 				CB7E75FB1E45758400229B9D /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,14 +437,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UPT3LKBD78;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 77LL4T7529;
 				INFOPLIST_FILE = SGLivingPublisher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingyun.app.SGLivingPublisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db9e99f2-9ea8-438d-b662-159ee4d10d8c";
-				PROVISIONING_PROFILE_SPECIFIER = YZTV_Universal_Development;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Debug;
 		};
@@ -434,14 +453,15 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = UPT3LKBD78;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = 77LL4T7529;
 				INFOPLIST_FILE = SGLivingPublisher/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.xingyun.app.SGLivingPublisher;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE = "db9e99f2-9ea8-438d-b662-159ee4d10d8c";
-				PROVISIONING_PROFILE_SPECIFIER = YZTV_Universal_Development;
+				PROVISIONING_PROFILE = "";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 			};
 			name = Release;
 		};

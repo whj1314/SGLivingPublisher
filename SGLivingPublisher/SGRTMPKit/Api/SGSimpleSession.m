@@ -63,6 +63,8 @@
     SGSimpleSession *session = [[self alloc] init];
     return session;
 }
+
+//自定义视屏属性
 - (void)setVideoConfig:(SGVideoConfig *)videoConfig{
     _videoConfig = videoConfig;
     self.videoSource.config = videoConfig;
@@ -80,6 +82,21 @@
     self.aacPackager.config = audioConfig;
     [self.audioSource start];
 }
+
+#pragma mark - Camera
+- (void)switchCamera{
+    if (!self.videoSource) {
+        return;
+    }
+    [self.videoSource swapFrontAndBackCameras];
+}
+- (void)changeFlash{
+    if (!self.videoSource) {
+        return;
+    }
+    [self.videoSource changeFlash];
+}
+
 #pragma mark- ------lazyLoad-------------------
 
 - (SGRtmpSession *)rtmpSession{

@@ -31,6 +31,16 @@
 @property (nonatomic,weak) id<SGVideoSourceDelegate> delegate;
 
 /**
+ *  摄像头切换
+ */
+- (void)swapFrontAndBackCameras;
+
+/**
+ *  闪光灯开关
+ */
+- (void)changeFlash;
+
+/**
  *  配置
  */
 @property (nonatomic,strong) SGVideoConfig *config;

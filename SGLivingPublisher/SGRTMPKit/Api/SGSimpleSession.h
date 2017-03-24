@@ -17,16 +17,19 @@
  */
 typedef NS_ENUM(NSUInteger, SGSimpleSessionState) {
     SGSimpleSessionStateNone,
-    SGSimpleSessionStateConnecting,
-    SGSimpleSessionStateConnected,
+    SGSimpleSessionStateConnecting,     //连接中
+    SGSimpleSessionStateConnected,      //已连接
     SGSimpleSessionStateReconnecting,
-    SGSimpleSessionStateEnd,
-    SGSimpleSessionStateError,
+    SGSimpleSessionStateEnd,            //结束
+    SGSimpleSessionStateError,          //连接异常
 };
 
 @class SGSimpleSession;
 @protocol SGSimpleSessionDelegate <NSObject>
 
+/**
+ *  连接状态回调
+ */
 - (void)simpleSession:(SGSimpleSession *)simpleSession statusDidChanged:(SGSimpleSessionState)status;
 
 @end
@@ -55,6 +58,16 @@ typedef NS_ENUM(NSUInteger, SGSimpleSessionState) {
  *  视频配置
  */
 @property (nonatomic,strong) SGVideoConfig *videoConfig;
+
+/**
+ *  切换摄像头
+ */
+- (void)switchCamera;
+
+/**
+ *   闪光灯切换
+ */
+- (void)changeFlash;
 
 /**
  *  音频配置
